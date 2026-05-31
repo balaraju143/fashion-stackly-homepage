@@ -4,21 +4,14 @@
 
 window.addEventListener("load", () => {
 
-    const loader = document.querySelector(".loader");
+    const loader =
+    document.querySelector(".loader");
 
-    if (loader) {
+    setTimeout(() => {
 
-        setTimeout(() => {
+        loader.classList.add("hide");
 
-            loader.classList.add("loader-hide");
-
-            setTimeout(() => {
-                loader.style.display = "none";
-            }, 800);
-
-        }, 2500);
-
-    }
+    }, 2500);
 
 });
 
@@ -28,16 +21,32 @@ window.addEventListener("load", () => {
 
 const menuBtn = document.querySelector(".menu-btn");
 const navbar = document.querySelector(".navbar");
+const overlay = document.querySelector(".overlay");
 
-if (menuBtn && navbar) {
+menuBtn.addEventListener("click", () => {
 
-    menuBtn.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    overlay.classList.toggle("active");
 
-        navbar.classList.toggle("active");
+    if(navbar.classList.contains("active")){
+        menuBtn.innerHTML =
+        '<i class="fas fa-times"></i>';
+    }else{
+        menuBtn.innerHTML =
+        '<i class="fas fa-bars"></i>';
+    }
 
-    });
+});
 
-}
+overlay.addEventListener("click", () => {
+
+    navbar.classList.remove("active");
+    overlay.classList.remove("active");
+
+    menuBtn.innerHTML =
+    '<i class="fas fa-bars"></i>';
+
+});
 
 // =========================
 // COUNTER ANIMATION
