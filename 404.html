@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 | Stackly Fashion</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f5f5f5
+    );
+
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    padding:20px;
+}
+
+.logo{
+    font-size:40px;
+    font-weight:800;
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+.error-code{
+
+    font-size:180px;
+    font-weight:800;
+
+    color:#FFD700;
+
+    line-height:1;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+h2{
+    font-size:40px;
+    margin-top:10px;
+    color:#111;
+}
+
+p{
+    color:#666;
+    margin:20px auto;
+    max-width:600px;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:15px 40px;
+
+    background:#FFD700;
+
+    color:#111;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.4s;
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 30px rgba(255,215,0,.4);
+}
+
+.circle1,
+.circle2{
+    position:absolute;
+    border-radius:50%;
+    z-index:-1;
+}
+
+.circle1{
+    width:300px;
+    height:300px;
+    background:rgba(255,215,0,.15);
+    top:-100px;
+    left:-100px;
+}
+
+.circle2{
+    width:400px;
+    height:400px;
+    background:rgba(255,215,0,.08);
+    bottom:-150px;
+    right:-150px;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .error-code{
+        font-size:120px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle1"></div>
+<div class="circle2"></div>
+
+<div class="container">
+
+     <div class="logo">
+        Stackly
+    </div>
+
+    <div class="error-code">
+        404
+    </div>
+
+    <h2>
+        Oops! Page Not Found
+    </h2>
+
+    <p>
+        The page you're looking for doesn't exist
+        or is currently under development.
+    </p>
+
+    <a href="index.html" class="btn">
+        Back To Home
+    </a>
+
+</div>
+
+</body>
+</html>
